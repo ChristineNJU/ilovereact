@@ -14,15 +14,21 @@
     <meta name="viewport" content="width=device-width,initial-scal=1">
 
     <link rel="stylesheet" type="text/css" href="/bundle/app.css">
-    <!--<link rel ="apple-touch-icon" href="apple-touch-icon.png">-->
-    <!--<link rel ="stylesheet" href="css/app.css">-->
 
+    <script type="text/javascript" src="node_modules/gsap/src/uncompressed/TweenMax.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="node_modules/gsap/src/uncompressed/TweenMax.js"></script>
+    <script type="text/javascript" src="node_modules/gsap/src/uncompressed/plugins/ScrollToPlugin.js"></script>
 </head>
 <body>
 
 
 <div id="slider-control">
-    <a href="#native" class="active">
+    <a href="#intro-section" class="active">
+        <div class="dot"></div>
+    </a>
+
+    <a href="#native">
         <div class="dot"></div>
     </a>
 
@@ -30,19 +36,15 @@
         <div class="dot"></div>
     </a>
 
-    <a href="#async">
-        <div class="dot"></div>
-    </a>
-
-    <a href="#flex">
+    <a href="#android">
         <div class="dot"></div>
     </a>
 </div>
 
 
-<div class="section section-first">
+<div id="intro-section" class="section section-first">
     <div class="overlay"></div>
-    <img class="react-logo" src="img/react-logo.svg"/>
+    <img class="react-logo" id="react-logo" src="img/react-logo.svg"/>
     <h1>Build Native Apps With React</h1>
     <div class="nav">
         <a href="" class="nav-item">Native iOS</a>
@@ -52,7 +54,7 @@
     </div>
 </div>
 
-<div class="section">
+<div id="native" class="section">
     <div class="iphone-demo">
         <div class="iphone-wrapper">
             <img class="iphone-frame" src="img/iphone-frame.svg"/>
@@ -68,7 +70,7 @@
     </div>
 </div>
 
-<div class="section">
+<div id="touch" class="section">
     <div class="iphone-demo">
         <div class="iphone-wrapper">
             <img class="iphone-frame" src="img/iphone-frame.svg"/>
@@ -86,12 +88,10 @@
     </div>
 </div>
 
-<div class="section">
+<div id="android" class="section">
     <h1>Android Is Here</h1>
-    <img class="android-logo" src="img/android-robot.svg"/>
+    <img class="android-logo" id="android-logo" src="img/android-robot.svg"/>
 </div>
-
-<!-- <script src="js/app.js"></script>-->
 
 </body>
 </html>

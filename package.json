@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "browser-sync start --server --files='index.html,bundle/app.css'",
+    "start": "browser-sync start --server --files=\"index.html,bundle/app.css,js/app.js\"",
     "css": "postcss --watch --use autoprefixer --use postcss-import css/app.css --output bundle/app.css"
   },
   "author": "christine",
   "license": "ISC",
   "dependencies": {
     "browser-sync": "^2.9.3",
+    "gsap": "^1.18.0",
     "normalize.css": "^3.0.3"
   },
   "devDependencies": {
