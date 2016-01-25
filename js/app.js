@@ -7,6 +7,8 @@ window.onload = function() {
     rotateRobot();
     updateSliderControl();
     addSmoothScrolling();
+
+    addScrollingBling();
 };
 
 window.onscroll = function(){
@@ -55,14 +57,12 @@ function updateSliderControl(){
 }
 
 function scrollToElement(element){
-    //console.log(element);
     var topOfElement = element.offsetTop;
 
     TweenMax.to(window,1,
         {scrollTo:{y:topOfElement},ease:Power2.easeInOut}
 
     );
-    //cosole.log("123");
 }
 
 function addSmoothScrolling(){
@@ -89,6 +89,35 @@ function addSmoothScrolling(){
         }
     }
 }
+
+function addScrollingBling(){
+
+    var controller = new ScrollMagic.Controller();
+
+    var fadeOutBackground = new ScrollMagic.Scene({
+        triggerElement:"#native",
+        triggerHook:"onEnter",
+        duration:"100%"
+    }).addTo(controller)
+        .setTween("#overlay-color",1,{opacity:1});
+
+
+    var moveIphone = new ScrollMagic.Scene({
+        triggerElement: "#native",
+        triggerHook: "onEnter",
+        duration: "100%"
+    }).addTo(controller)
+        .setTween("#iphone",1,{width:"50%",y:0});
+
+    var pinIphone = new ScrollMagic.Scene({
+        triggerElement: "#native",
+        triggerHook: "onLeave",
+        duration: "100%"
+    }).addTo(controller)
+        //.addIndicators({name:"pin iphone"})
+        .setPin("#iphone");
+}
+
 
 //var deg360 = 2*Math.PI;
 //var start = null;

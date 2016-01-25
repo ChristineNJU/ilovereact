@@ -19,6 +19,9 @@
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="node_modules/gsap/src/uncompressed/TweenMax.js"></script>
     <script type="text/javascript" src="node_modules/gsap/src/uncompressed/plugins/ScrollToPlugin.js"></script>
+    <script type="text/javascript" src="node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js"></script>
+    <script type="text/javascript" src="node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+    <!--<script type="text/javascript" src="node_modules/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js.js"></script>-->
 </head>
 <body>
 
@@ -41,11 +44,11 @@
     </a>
 </div>
 
-
 <div id="intro-section" class="section section-first">
     <div class="overlay"></div>
+    <div id="overlay-color"></div>
     <img class="react-logo" id="react-logo" src="img/react-logo.svg"/>
-    <h1>Build Native Apps With React</h1>
+    <h1 >Build Native Apps With React</h1>
     <div class="nav">
         <a href="" class="nav-item">Native iOS</a>
         <a href="" class="nav-item">Touch Handling</a>
@@ -54,28 +57,28 @@
     </div>
 </div>
 
-<div id="native" class="section">
-    <div class="iphone-demo">
+<div id="iphone">
+    <!--<div class="iphone-demo">-->
         <div class="iphone-wrapper">
             <img class="iphone-frame" src="img/iphone-frame.svg"/>
             <img class="iphone-content" src="img/tumblr-demo.jpg"/>
         </div>
+    <!--</div>-->
+</div>
+
+<div id="native" class="section">
+    <div class="empty">
     </div>
     <div class="feature-description">
         <h2>Native Experience</h2>
         <p>
             Takes advantage of native iOS components to give your app a consistent look and feel with the rest of the platform ecosystem, and keeps the quality bar high.
         </p>
-        <!--awesome feature description11111111111111111111111-->
     </div>
 </div>
 
 <div id="touch" class="section">
-    <div class="iphone-demo">
-        <div class="iphone-wrapper">
-            <img class="iphone-frame" src="img/iphone-frame.svg"/>
-            <img class="iphone-content" src="img/swype-demo.jpg"/>
-        </div>
+    <div class="empty">
     </div>
 
     <div class="feature-description">
